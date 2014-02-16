@@ -23,7 +23,7 @@ def filterchain(request, app, model, field, value, manager=None):
     for item in results:
         result.append({'value': item.pk, 'display': unicode(item)})
     json = simplejson.dumps(result)
-    return HttpResponse(json, mimetype='application/json')
+    return HttpResponse(json, content_type='application/json')
 
 
 def filterchain_all(request, app, model, field, value):
@@ -44,4 +44,4 @@ def filterchain_all(request, app, model, field, value):
     for item in results:
         final.append({'value': item.pk, 'display': unicode(item)})
     json = simplejson.dumps(final)
-    return HttpResponse(json, mimetype='application/json')
+    return HttpResponse(json, content_type='application/json')
