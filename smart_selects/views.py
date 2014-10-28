@@ -1,8 +1,8 @@
 import locale
+import json as simplejson
 
 from django.db.models import get_model
 from django.http import HttpResponse
-from django.utils import simplejson
 
 from smart_selects.utils import unicode_sorter
 
